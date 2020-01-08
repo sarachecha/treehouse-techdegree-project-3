@@ -5,102 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <table>
-        <caption>Employee information</caption>
-        <thead>
-            <tr>
-                <!-- first row -->
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Role</th>
-            </tr> <!-- end first row -->
-        </thead>
-        <tfoot>
-            <tr>
-                <td colspan="3">Table is only refreshed every 15 minutes.</td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <!-- second row. first column is a table header cell so computers know that the rest of the information in the row is related to this cell-->
-                <th scope="row">Sara Sarachecha</th>
-                <td>sara@sarachecha.dev</td>
-                <td>Front-end developer</td>
-            </tr> <!-- end second row -->
-        </tbody>
-    </table>
+    <header>
+        <h1>The Code Review</h1>
+    </header>
+    <div class="flex">
+        <h2>Signup for our newsletter</h2>
+        <p>Get the latest news on how your code is doing right in your inbox.</p>
+        <hr>
+        <hr class="thin">
+        <form action="index.html" method="post">
+            <fieldset>
+                <legend>Contact information</legend>
+                <div class="row">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="user_name" placeholder="required" required>
+                </div>
+                <div class="row">
+                    <label for="mail">Email address</label>
+                    <input type="email" id="mail" name="user_email" placeholder="required" required>
+                </div>
+                <div class="row">
+                    <label for="telephone">Phone number</label>
+                        <input type="tel" id="telephone" name="user_telephone" placeholder="(555) 555-5555">
+                </div>
+                <div class="row">
+                    <label for="address">Street address</label>
+                        <input type="text" id="address" name="user_address">
+                </div>
+                <div class="row">
+                    <label for="city">City</label>
+                        <input type="text" id="city" name="user_city">
+                </div>
+                <div class="row">
+                <label for="province">Province</label>
+                    <select id="province" name="user_province">
+                        <option value="none">-----</option>
+                        <option value="alberta">Alberta</option>
+                        <option value="british_columbia">British Columbia</option>
+                        <option value="manitoba">Manitoba</option>
+                        <option value="new_brunswick">New Brunswick</option>
+                        <option value="newfoundland">Newfoundland and Labrador</option>
+                        <option value="nova_scotia">Nova Scotia</option>
+                        <option value="ontario">Ontario</option>
+                        <option value="pei">Prince Edward Island</option>
+                        <option value="quebec">Quebec</option>
+                        <option value="saskatchewan">Saskatchewan</option>
+                    </select>
+    </div>
+    <div class="row-postal">
+        <label for="postal_code">Postal code</label>
+            <input type="text" id="postal_code" name="user_postalcode" placeholder="A1A 1A1">
+    </div>
+    </fieldset>
+    <hr class="thin">
+    <fieldset>
+        <legend>Newsletter</legend>
+        <p>Select the newsletters you'd like to receive:</p>
+        <input type="checkbox" id="html" value="newsletter_html" name="user_newsletter">
+        <label for="html">HTML News</label><br />
+        <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter">
+        <label for="css">CSS News</label><br />
+        <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter">
+        <label for="javascript">JavaScript News</label>
 
-    <!-- HTML forms (can't nest forms inside of forms) -->
-    <form action="index.html" method="post">
+        <label>Newsletter format:</label>
+        <input type="radio" id="format_html" value="format_html" name="user_format">
+        <label for="format_html">HTML</label><br>
+        <input type="radio" id="format_plaintext" value="format_plaintext" name="user_format">
+        <label for="format_plaintext">Plain text</label>
 
-        <h1>Sign up</h1>
-        <fieldset>
-            <legend><span class="number">1</span>Your basic info</legend>
-
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" placeholder="Sara Chisholm">
-
-            <label for="email">Email address</label>
-            <input type="email" id="mail" name="user_email">
-
-            <label for="password">Password</lable>
-                <input type="password" id="password" name="user_password">
-        </fieldset>
-
-        <fieldset>
-            <legend><span class="number">2</span>Your profile</legend>
-            <label for="bio">Short bio</label>
-            <textarea id="bio" name="user_bio"></textarea>
-        </fieldset>
-
-        <label for="job">Job role:</label>
-
-        <select id="job" name="user_job">
-            <optgroup label="web">
-                <option value="frontend_developer">Front-End Developer</option>
-                <option value="php_developer">php developer</option>
-                <option value="ruby_developer">ruby Developer</option>
-            </optgroup>
-            <optgroup label="web">
-                <option value="frontend_developer">Front-End Developer</option>
-                <option value="php_developer">php developer</option>
-                <option value="ruby_developer">ruby Developer</option>
-            </optgroup>
-        </select>
-
-            <label>Age</label>
-            <input type="radio" id="under_13" value="under_13" name="user_age">
-            <label for="under_13">Under 13</label><br />
-            <input type="radio" id="over_13" value="over_13" name="user_age">
-            <label for="over_13">13 or older</label>
-
-            <label>Interests</label>
-            <input type="checkbox" id="development" value="interest_development" name="user_interest">
-            <label for="development">Development</label><br />
-            <input type="checkbox" id="Design" value="interest_design" name="user_interest">
-            <label for="design">Design</label><br />
-            <input type="checkbox" id="business" value="interest_business" name="user_interest">
-            <label for="business">Business</label>
-
-        <button type="submit">Sign up</button>
-        <button type="reset">Reset form</button>
-   
-   
-   
-        <h1>Shirt Order Form</h1>
-        <select id="color" name="shirt_color">
-            <option value="red">red</option>
-            <option value="yellow">yellow</option>
-            <option value="purple">purple</option>
-            <option value="blue">blue</option>
-            <option value="green">green</option>
-            <option value="orange">orange</option>
-      </select> </form>
-
+        <label for="comment">Other topics you'd like to hear about:</label>
+        <textarea id="comment" name="user_comment"></textarea>
+        <button type="submit" class="btn">Sign up</button>
+    </fieldset>
+    </form>
+    </div>
+    <p class="copy">&copy;The Code Review</p>
 </body>
 
 </html>
