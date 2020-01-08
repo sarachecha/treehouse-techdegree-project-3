@@ -1,0 +1,223 @@
+
+
+/* attribute selectors */
+
+ /* targets elements with class form-contact*/
+form[class="form-contact"] {
+    color: red;
+}
+
+.form-contact {
+    color: red;
+}
+
+[class] /* targets all elements with a class */
+
+div[id="container"] {
+    max-width: 768px;
+    margin: auto;
+}
+
+#container {
+    max-width: 768px;
+    margin: auto;
+}
+
+input[type="text"] {
+    background: #fdfee6;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+a[target="_blank"] {
+    color: #39Add1;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+/* dry works with classes, not ids */
+
+.br {
+    border-radius: .5em;
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto 2em;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: .875em;
+    font-weight: 400;
+    color: #fff;
+    Padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    opacity: .75;
+}
+
+.default {
+    background-color: #ccc;
+}
+
+.error {
+    background-color: #ff784f;
+}
+
+/* buttons to appear side by side */
+
+@media (min-width: 769px) {
+    .inln {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+/* combinators */
+
+
+/* child of a parent */ 
+form > a {
+    font-size: .7em;
+}
+
+/* sibling following a sibling */ 
+
+.btn + .btn {
+    margin-left: 20px;
+}
+
+/* all child elements of defined element */ 
+h1 ~ label {
+
+}
+
+/* pseudoclasses */
+
+li:first-child {
+    background: #52bab3;
+    color: white;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+:only-child {
+    color: #52bab3;
+    font-size: 1.5em;
+}
+
+:empty {
+    background-color: tomato;
+}
+
+/* sub-string matching */
+
+a[href^="http://"] {
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    padding-left: 25px;
+}
+
+a[href$=".pdf"] {
+    background-image: url('...');
+}
+
+a[href*="downloads"] {
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    padding-left: 25px;
+}
+
+/* pseudo selectors - action */
+
+input:focus,
+textarea:focus {
+    border-color: tomato;
+}
+
+:disabled {
+    background: lightgrey;
+}
+
+input[type="checkbox"]:checked +label {
+    font-weight: bold;
+}
+
+/* :nth-child */
+
+li:nth-child(odd) {
+background: tomato;
+color: white;
+}
+
+li:nth-child(even) {
+    background: tomato;
+    color: white;
+    }
+
+    li:nth-child(an+b) {
+        background: tomato;
+        color: white;
+        }
+
+        li:nth-child(2n+3) {
+            background: tomato;
+            color: white;
+            }
+
+
+        li:nth-child(-n+4) {
+            background: tomato;
+            color: white;
+            }
+
+
+            li:nth-of-type(4) {
+                background: tomato;
+                color: white;
+                }
+                li:nth-last-of-type(4) {
+                    background: tomato;
+                    color: white;
+                    }
+
+
+                    /*root pseudoclass*/
+
+        :root {
+            background: tomato;
+        }
+
+        :target {
+            background: white;
+            color: tomato;
+        }
+
+        div:not(#col-a) {
+            background: red;
+        }
+
+        .col: not(:firstchild)
+
+        .intro:first-line {
+
+        }
+
+        .jpg.jpg::before {
+            content= url();
+        }

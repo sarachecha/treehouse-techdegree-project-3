@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>The Code Review</h1>
+    </header>
+    <div class="flex">
+        <h2>Signup for our newsletter</h2>
+        <p>Get the latest news on how your code is doing right in your inbox.</p>
+        <hr>
+        <hr class="thin">
+        <form action="index.html" method="post">
+            <fieldset>
+                <legend>Contact information</legend>
+                <div class="row">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="user_name" placeholder="required" required>
+                </div>
+                <div class="row">
+                    <label for="mail">Email address</label>
+                    <input type="email" id="mail" name="user_email" placeholder="required" required>
+                </div>
+                <div class="row">
+                    <label for="telephone">Phone number</label>
+                        <input type="tel" id="telephone" name="user_telephone" placeholder="(555) 555-5555">
+                </div>
+                <div class="row">
+                    <label for="address">Street address</label>
+                        <input type="text" id="address" name="user_address">
+                </div>
+                <div class="row">
+                    <label for="city">City</label>
+                        <input type="text" id="city" name="user_city">
+                </div>
+                <div class="row">
+                <label for="province">Province</label>
+                    <select id="province" name="user_province">
+                        <option value="none">-----</option>
+                        <option value="alberta">Alberta</option>
+                        <option value="british_columbia">British Columbia</option>
+                        <option value="manitoba">Manitoba</option>
+                        <option value="new_brunswick">New Brunswick</option>
+                        <option value="newfoundland">Newfoundland and Labrador</option>
+                        <option value="nova_scotia">Nova Scotia</option>
+                        <option value="ontario">Ontario</option>
+                        <option value="pei">Prince Edward Island</option>
+                        <option value="quebec">Quebec</option>
+                        <option value="saskatchewan">Saskatchewan</option>
+                    </select>
+    </div>
+    <div class="row-postal">
+        <label for="postal_code">Postal code</label>
+            <input type="text" id="postal_code" name="user_postalcode" placeholder="A1A 1A1">
+    </div>
+    </fieldset>
+    <hr class="thin">
+    <fieldset>
+        <legend>Newsletter</legend>
+        <p>Select the newsletters you'd like to receive:</p>
+        <input type="checkbox" id="html" value="newsletter_html" name="user_newsletter">
+        <label for="html">HTML News</label><br />
+        <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter">
+        <label for="css">CSS News</label><br />
+        <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter">
+        <label for="javascript">JavaScript News</label>
+
+        <label>Newsletter format:</label>
+        <input type="radio" id="format_html" value="format_html" name="user_format">
+        <label for="format_html">HTML</label><br>
+        <input type="radio" id="format_plaintext" value="format_plaintext" name="user_format">
+        <label for="format_plaintext">Plain text</label>
+
+        <label for="comment">Other topics you'd like to hear about:</label>
+        <textarea id="comment" name="user_comment"></textarea>
+        <button type="submit" class="btn">Sign up</button>
+    </fieldset>
+    </form>
+    </div>
+    <p class="copy">&copy;The Code Review</p>
+</body>
+
+</html>
