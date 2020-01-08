@@ -1,80 +1,79 @@
 /* Global styles */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: 1em;
-    line-height: 1.25;
-    color: #26394C;
-    font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+  line-height: 1.25;
+  color: #26394c;
+  font-family: "Roboto Slab", serif;
 }
 
 header {
-    color: #fff;
-    background-color: #4D4D4D;
-    text-align: center;
-    padding: 0 auto;
-    margin: 0 auto;
+  color: #fff;
+  background-color: #4d4d4d;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
 }
 
 h1 {
-    padding: 0.625em 0;
-    margin: 0 auto;
+  padding: 0.625em 0;
+  margin: 0 auto;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: .625em;
+  text-align: center;
+  margin-bottom: 0.625em;
 }
 
 h2 + p {
-    text-align: center;
-    padding: 0 1.875em 1.25em 1.875em;
-    color: #95AFC9;
+  text-align: center;
+  padding: 0 1.875em 1.25em 1.875em;
+  color: #95afc9;
 }
 
 p {
-    display: block;
-    margin-block-start: 0;
+  display: block;
 }
 
 hr {
-    border-top: 3px solid #000;
-    margin: 0.125em 0.9375em;
+  border-top: 3px solid #000;
+  margin: 0.125em 0.9375em;
 }
 
 hr.thin {
-    border-top: 1px solid #000;
-    margin: 0 0.9375em 1.25em 0.9375em;
+  border-top: 1px solid #000;
+  margin: 0 0.9375em 1.25em 0.9375em;
 }
 legend + p {
-    margin: auto auto 1.25em auto;
+  margin: auto auto 1.25em auto;
 }
 
 #postal_code {
-    width: 50%;
+  width: 50%;
 }
 
 legend {
-    font-weight: 700;
-    margin: 0.625em 0;
-    padding: .5em 0;
-    font-size: 1.25em;
+  font-weight: 700;
+  margin: 0.625em 0;
+  padding: 0.5em 0;
+  font-size: 1.25em;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 .btn {
-    color: #fff;
-    padding: 1.25em;
-    display: block;
-    margin: auto;
-    width: 100%;
-    border-radius: 3%;
-    background-color: #26394C;
+  color: #fff;
+  padding: 1.25em;
+  display: block;
+  margin: auto;
+  width: 100%;
+  border-radius: 3%;
+  background-color: #26394c;
 }
 
 input[type="text"],
@@ -82,122 +81,118 @@ input[type="email"],
 input[type="tel"],
 select[id="province"],
 textarea {
-    display: block;
-    background: #EBF0F5;
-    width: 100%;
-    border: none;
-    margin-bottom: 1.25em;
+  display: block;
+  background: #ebf0f5;
+  width: 100%;
+  border: none;
+  margin-bottom: 1.25em;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select[id="province"] {
-    height: 3.125em;
+  height: 3.125em;
 }
 
 input::-webkit-input-placeholder {
-    text-align: right;
-    padding-right: 0.625em;
-    color: #84A3C1;
+  text-align: right;
+  padding-right: 0.625em;
+  color: #84a3c1;
 }
 
-
 input:invalid:required {
-   border: 2px solid #26394C;
-   border-radius: 3%;
-
+  border: 2px solid #26394c;
+  border-radius: 3%;
 }
 
 textarea {
-    height: 6.25em;
+  height: 6.25em;
 }
 
 label + label {
-    display: block;
+  display: block;
 }
 
 label {
-    margin-bottom: 1.25em;
+  margin-bottom: 1.25em;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    color: #000;
-    outline-color: #46698B;
-    transition: all .08s ease-out;
+  color: #000;
+  outline-color: #46698b;
+  transition: all 0.08s ease-out;
 }
 
 input[id="javascript"],
 input[id="format_plaintext"] {
-    margin-bottom: 1.25em;
+  margin-bottom: 1.25em;
 }
 .copy {
-    font-size: .9em;
-    font-style: italic;
-    color: #92AEC9;
-    text-align: center;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #92aec9;
+  text-align: center;
 }
 
 /* Desktop */
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
+  /* reference: https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_1b */
 
-/* reference: https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_1b */
-
-header {
+  header {
     margin: 0 auto 3em 0;
-}
-h2 {
-    margin-bottom: .2em;
-}
+  }
+  h2 {
+    margin-bottom: 0.2em;
+  }
 
-h2 + p {
-    font-size: .75em;
+  h2 + p {
+    font-size: 0.75em;
+  }
+  .flex {
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-}
-    .flex {
-        width: 50%;
-        max-width: 1200px;
-        margin: 0 auto;
-      }  
+  .row {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-      .row {
-        display: flex;
-        justify-content: flex-end;
-      }
+  .row-postal {
+    display: flex;
+    justify-content: flex-start;
+  }
 
-      .row-postal {
-        display: flex;
-        justify-content: flex-start;
-      }
+  .row > label,
+  .row-postal > label {
+    padding-right: 1em;
+    width: 30%;
+  }
 
-      .row > label, 
-      .row-postal > label {
-        padding-right: 1em;
-        width: 30%;
-      }
+  .row > input,
+  .row > select {
+    flex: 1;
+  }
 
-      .row > input,
-      .row > select {
-        flex: 1;
-}
-
-    input[id="postal_code"] {
+  input[id="postal_code"] {
     max-width: 30%;
     margin-bottom: 2.5em;
-}
+  }
 
-hr {
+  hr {
     margin: 0 auto;
-}
+  }
 
-hr.thin {
+  hr.thin {
     margin: 0.3125em auto 1.25em auto;
-}
+  }
 
-label {
+  label {
     margin-bottom: 1em;
-}
+  }
 }
