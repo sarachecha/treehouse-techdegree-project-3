@@ -139,7 +139,7 @@ input[id="format_plaintext"] {
 
 /* Desktop */
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   /* reference: https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_1b */
 
   header {
